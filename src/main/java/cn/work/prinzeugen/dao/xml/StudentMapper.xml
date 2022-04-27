@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.work.prinzeugen.dao.StudentMapper">
+    <resultMap id="Student" type="cn.work.prinzeugen.entity.Student">
+        <id column="sno" jdbcType="INTEGER" property="sno" javaType="Integer"/>
+        <result column="age" jdbcType="INTEGER" property="age" javaType="Integer"/>
+        <result column="sname" jdbcType="VARCHAR" property="sname" javaType="String"/>
+        <result column="pwd" jdbcType="CHAR" property="pwd" javaType="String"/>
+        <result column="address" jdbcType="VARCHAR" property="address" javaType="String"/>
+    </resultMap>
+    <insert id="insertData" parameterType="cn.work.prinzeugen.entity.Student">
+        INSERT INTO student(sno, sname, pwd, age, address) VALUES(#{sno}, #{sname}, #{pwd}, #{age}, #{#address})
+    </insert>
+    <update id="updateData" parameterType="cn.work.prinzeugen.entity.Student">
+        UPDATE student SET sname=#{sname}, age=#{age}, pwd=#{pwd}, address=#{address} WHERE sno=#{sno}
+    </update>
+    <delete id="deleteData" parameterType="Integer">
+        DELETE FROM student WHERE sno=#{sno}
+    </delete>
+    <select id="findById" resultType="cn.work.prinzeugen.entity.Student">
+        SELECT * FROM student WHERE sno=#{id} AND pwd=#{pwd}
+    </select>
+    <select id="findAll" resultMap="Student">
+        SELECT * FROM student
+    </select>
+</mapper>

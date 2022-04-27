@@ -1,0 +1,28 @@
+server:
+  port: 80
+  servlet:
+    context-path: /dev
+spring:
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/studentManager
+    username: root
+    password: 1145141919810
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .jsp
+    mode: HTML   #配置模板引擎的这个模板的类型
+    encoding: utf-8   #设置模板的内容编码
+    cache: false  #配置模板的缓存
+  mvc:
+    static-path-pattern: /static/**
+#mybatis:
+#  type-aliases-package: classpath:cn.work.prinzeugen.entity
+#  mapper-locations:
+#    - classpath:cn/work/prinzeugen/dao/**/*.xml
+mybatis-plus:
+  type-aliases-package: classpath:cn.work.prinzeugen.entity
+  mapper-locations:
+    - classpath:cn/work/prinzeugen/dao/**/*.xml
