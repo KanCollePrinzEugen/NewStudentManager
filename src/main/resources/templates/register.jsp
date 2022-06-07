@@ -18,6 +18,12 @@
                     </label></td>
                 </tr>
                 <tr>
+                    <td class="left">姓名：</td>
+                    <td class="right"><label>
+                        <input type="text" name="sname" class="textInput"/>
+                    </label></td>
+                </tr>
+                <tr>
                     <td class="left">年齢：</td>
                     <td class="right"><label>
                         <input type="text" name="age" class="textInput"/>
@@ -38,7 +44,7 @@
                 <tr>
                     <td class="left">パスワートを確認：</td>
                     <td class="right"><label>
-                        <input type="password" name="pwd" class="textInput"/>
+                        <input type="password" name="pwdCheck" class="textInput"/>
                     </label></td>
                 </tr>
                 <tr>

@@ -33,6 +33,8 @@ public class StudentController {
     public String goToMain() {return "main";}
     @RequestMapping("/toDeleteStudent")
     public String toDeleteStudent() {return "deleteStudent";}
+    @RequestMapping("/toFindStudent")
+    public String toFindStudent() {return "findStudent";}
     @RequestMapping("/studentLogin")
     public String studentLogin(@RequestParam("sno") String sno,
                                @RequestParam("pwd") String pwd){
@@ -93,4 +95,5 @@ public class StudentController {
             return "updateStudent";
         }
     }
+
 }
