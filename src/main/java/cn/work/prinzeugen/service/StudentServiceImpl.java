@@ -6,6 +6,8 @@ import java.util.Map;
 
 import cn.work.prinzeugen.dao.StudentMapper;
 import cn.work.prinzeugen.entity.Student;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -40,10 +42,20 @@ public class StudentServiceImpl  implements  StudentService{
 	}
 
 	@Override
-	public List<Student> getAllStudents() {
+	public PageInfo<Student> getAllStudents(int page, int rows) {
 
-		return dao.findAll();
+		//1.开启分页插件
+		PageHelper.startPage(page,rows);
 
+		//2.从数据库查询所有要分页的记录
+		List<Student> list = dao.findAll();
+
+		//3.将查询结果封装到PageInfo对象中
+		PageInfo<Student> studentPageInfo = new PageInfo<Student>(list);
+
+		System.out.println("我是服务层：结果是" + studentPageInfo.toString());
+
+		return studentPageInfo;
 	}
 
 	@Override
@@ -58,8 +70,7 @@ public class StudentServiceImpl  implements  StudentService{
 
 	@Override
 	public int updateStudent(Student s) {
-//		return dao.updateStudent(s);
-		return 0;
+		return dao.updateData(s);
 	}
 
 	@Override

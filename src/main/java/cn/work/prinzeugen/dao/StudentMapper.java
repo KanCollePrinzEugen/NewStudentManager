@@ -3,7 +3,6 @@ package cn.work.prinzeugen.dao;
 import cn.work.prinzeugen.entity.Student;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -20,9 +19,11 @@ public interface StudentMapper {
 
     /**
      * 更新数据
+     *
      * @param instance 实体类
+     * @return
      */
-    void updateData(Student instance);
+    int updateData(Student instance);
 
     /**
      * 删除数据

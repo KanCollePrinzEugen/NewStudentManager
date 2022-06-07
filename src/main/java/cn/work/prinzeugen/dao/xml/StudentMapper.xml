@@ -10,7 +10,7 @@
         <result column="address" jdbcType="VARCHAR" property="address" javaType="String"/>
     </resultMap>
     <insert id="insertData" parameterType="cn.work.prinzeugen.entity.Student">
-        INSERT INTO student(sno, sname, pwd, age, address) VALUES(#{sno}, #{sname}, #{pwd}, #{age}, #{#address})
+        INSERT INTO student(sno, sname, pwd, age, address) VALUES(#{sno}, #{sname}, #{pwd}, #{age}, #{address})
     </insert>
     <update id="updateData" parameterType="cn.work.prinzeugen.entity.Student">
         UPDATE student SET sname=#{sname}, age=#{age}, pwd=#{pwd}, address=#{address} WHERE sno=#{sno}

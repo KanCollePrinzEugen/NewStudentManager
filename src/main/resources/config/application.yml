@@ -18,10 +18,6 @@ spring:
     cache: false  #配置模板的缓存
   mvc:
     static-path-pattern: /static/**
-#mybatis:
-#  type-aliases-package: classpath:cn.work.prinzeugen.entity
-#  mapper-locations:
-#    - classpath:cn/work/prinzeugen/dao/**/*.xml
 mybatis-plus:
   type-aliases-package: classpath:cn.work.prinzeugen.entity
   mapper-locations:

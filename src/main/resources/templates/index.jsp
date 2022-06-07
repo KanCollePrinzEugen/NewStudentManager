@@ -1,13 +1,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<title>学生管理システムへようこそ</title>
+	<title>欢迎使用学生管理系统</title>
 	<link rel="stylesheet" type="text/css" th:href="@{/static/css/index.css}">
 </head>
 <body>
-<h1>学生管理システムへようこそ!</h1>
+<h1>欢迎使用学生管理系统!</h1>
 <div id="loginBox" class="content">
 	<form action="studentLogin" method="post">
-		<h2>アカウート情報を入力してください</h2>
+		<h2>请登录</h2>
 		<table>
 			<tr>
 				<td class="left">ID：</td>
@@ -16,22 +16,22 @@
 				</label></td>
 			</tr>
 			<tr>
-				<td class="left">パスワート：</td>
+				<td class="left">密码：</td>
 				<td class="right"><label>
 					<input class="textInput" type="password" name="pwd" />
 				</label></td>
 			</tr>
 			<tr>
-				<td colspan="2"><input type="submit" class="submitButton" value="サインイン" /></td>
+				<td colspan="2"><input type="submit" class="submitButton" value="登录" /></td>
 			</tr>
 			<tr>
 				<td class="centerButton" colspan="2">
-					<a href="toRegister">新しいアカウント作成</a>
+					<a href="toRegister">创建新账号</a>
 				</td>
 			</tr>
 			<tr>
 				<td class="centerButton" colspan="2">
-					<a href="toChangePassword">IDまたはパスワートをお忘れですか?</a>
+					<a href="toChangePassword">忘记了密码？</a>
 				</td>
 			</tr>
 		</table>

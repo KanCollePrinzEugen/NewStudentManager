@@ -3,12 +3,12 @@
     position: relative;
     top: 70px;
     width: 550px;
-    height: 450px;
+    height: 475px;
     margin: auto;
     background-color: aliceblue;
     border-radius: 5px;
     box-shadow: 4px 4px 5px #363636;
-    /*padding: 25px;*/
+    padding: 25px;
 }
 h1{
     position: relative;
@@ -49,6 +49,7 @@ form{
     color: blue;
     font-weight: bolder;
     font-family: 楷体;
+    text-align: center;
 }
 tr {
     height: 40px;
